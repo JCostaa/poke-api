@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "PokemonMaster.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/PokemonMaster.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PokemonMaster.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PokemonMaster.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PokemonMaster.Domain/PokemonMaster.Domain.csproj",
+      "msbuildProject": "../PokemonMaster.Domain/PokemonMaster.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "PokemonMaster.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/juliocosta/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/PokemonMaster.Application.csproj",
+      "projectName": "PokemonMaster.Application",
+      "projectPath": "/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/PokemonMaster.Application.csproj",
+      "packagesPath": "/Users/juliocosta/.nuget/packages/",
+      "outputPath": "/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/juliocosta/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/PokemonMaster.Domain.csproj": {
+              "projectPath": "/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/PokemonMaster.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.202/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

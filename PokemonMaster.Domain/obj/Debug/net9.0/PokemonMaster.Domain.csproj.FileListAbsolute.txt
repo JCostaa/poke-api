@@ -1,0 +1,11 @@
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/bin/Debug/net9.0/PokemonMaster.Domain.deps.json
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/bin/Debug/net9.0/PokemonMaster.Domain.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/bin/Debug/net9.0/PokemonMaster.Domain.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/PokemonMaster.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/PokemonMaster.Domain.AssemblyInfoInputs.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/PokemonMaster.Domain.AssemblyInfo.cs
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/PokemonMaster.Domain.csproj.CoreCompileInputs.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/PokemonMaster.Domain.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/refint/PokemonMaster.Domain.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/PokemonMaster.Domain.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Domain/obj/Debug/net9.0/ref/PokemonMaster.Domain.dll

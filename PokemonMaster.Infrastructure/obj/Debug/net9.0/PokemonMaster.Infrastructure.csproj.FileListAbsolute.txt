@@ -1,0 +1,17 @@
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/bin/Debug/net9.0/PokemonMaster.Infrastructure.deps.json
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/bin/Debug/net9.0/PokemonMaster.Infrastructure.runtimeconfig.json
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/bin/Debug/net9.0/PokemonMaster.Infrastructure.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/bin/Debug/net9.0/PokemonMaster.Infrastructure.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/bin/Debug/net9.0/PokemonMaster.Domain.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/bin/Debug/net9.0/PokemonMaster.Domain.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.csproj.AssemblyReference.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.AssemblyInfoInputs.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.AssemblyInfo.cs
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonM.753B25D3.Up2Date
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/refint/PokemonMaster.Infrastructure.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/PokemonMaster.Infrastructure.genruntimeconfig.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Infrastructure/obj/Debug/net9.0/ref/PokemonMaster.Infrastructure.dll

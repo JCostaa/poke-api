@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "o+475ClGQCh1WubMe5qv9s7+ANEXTNnWuG43v/RJPAI=",
+  "Source": "PokemonMaster.API",
+  "BasePath": "_content/PokemonMaster.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,15 @@
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/bin/Debug/net9.0/PokemonMaster.Application.deps.json
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/bin/Debug/net9.0/PokemonMaster.Application.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/bin/Debug/net9.0/PokemonMaster.Application.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/bin/Debug/net9.0/PokemonMaster.Domain.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/bin/Debug/net9.0/PokemonMaster.Domain.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.csproj.AssemblyReference.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.AssemblyInfoInputs.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.AssemblyInfo.cs
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.csproj.CoreCompileInputs.cache
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonM.482BE540.Up2Date
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/refint/PokemonMaster.Application.dll
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/PokemonMaster.Application.pdb
+/Users/juliocosta/Documents/workspace/JCTech/PokemonMaster/src/PokemonMaster.Application/obj/Debug/net9.0/ref/PokemonMaster.Application.dll
