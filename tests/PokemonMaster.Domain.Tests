@@ -1,0 +1,88 @@
+using Xunit;
+using PokemonMaster.Domain.Entities;
+using PokemonMaster.Domain.Interfaces;
+using Moq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace PokemonMaster.Domain.Tests
+{
+    public class PokemonRepositoryTests
+    {
+        private readonly Mock<IPokemonRepository> _pokemonRepositoryMock;
+
+        public PokemonRepositoryTests()
+        {
+            _pokemonRepositoryMock = new Mock<IPokemonRepository>();
+        }
+
+        [Fact]
+        public async Task GetRandomPokemons_ShouldReturnListOfPokemons()
+        {
+            // Arrange
+            var expectedPokemons = new List<Pokemon>
+            {
+                new Pokemon { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1" },
+                new Pokemon { Id = 2, Name = "Ivysaur", Sprite = "base64sprite2" },
+                new Pokemon { Id = 3, Name = "Venusaur", Sprite = "base64sprite3" }
+            };
+
+            _pokemonRepositoryMock.Setup(repo => repo.GetRandomPokemons(10)).ReturnsAsync(expectedPokemons);
+
+            // Act
+            var result = await _pokemonRepositoryMock.Object.GetRandomPokemons(10);
+
+            // Assert
+            Assert.Equal(expectedPokemons.Count, result.Count);
+        }
+
+        [Fact]
+        public async Task GetPokemonById_ShouldReturnPokemon()
+        {
+            // Arrange
+            var expectedPokemon = new Pokemon { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1" };
+
+            _pokemonRepositoryMock.Setup(repo => repo.GetPokemonById(1)).ReturnsAsync(expectedPokemon);
+
+            // Act
+            var result = await _pokemonRepositoryMock.Object.GetPokemonById(1);
+
+            // Assert
+            Assert.Equal(expectedPokemon.Name, result.Name);
+        }
+
+        [Fact]
+        public async Task CapturePokemon_ShouldAddPokemonToCapturedList()
+        {
+            // Arrange
+            var pokemonToCapture = new Pokemon { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1" };
+
+            _pokemonRepositoryMock.Setup(repo => repo.CapturePokemon(pokemonToCapture)).Returns(Task.CompletedTask);
+
+            // Act
+            await _pokemonRepositoryMock.Object.CapturePokemon(pokemonToCapture);
+
+            // Assert
+            _pokemonRepositoryMock.Verify(repo => repo.CapturePokemon(pokemonToCapture), Times.Once);
+        }
+
+        [Fact]
+        public async Task GetCapturedPokemons_ShouldReturnListOfCapturedPokemons()
+        {
+            // Arrange
+            var expectedCapturedPokemons = new List<Pokemon>
+            {
+                new Pokemon { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1" },
+                new Pokemon { Id = 2, Name = "Ivysaur", Sprite = "base64sprite2" }
+            };
+
+            _pokemonRepositoryMock.Setup(repo => repo.GetCapturedPokemons()).ReturnsAsync(expectedCapturedPokemons);
+
+            // Act
+            var result = await _pokemonRepositoryMock.Object.GetCapturedPokemons();
+
+            // Assert
+            Assert.Equal(expectedCapturedPokemons.Count, result.Count);
+        }
+    }
+}

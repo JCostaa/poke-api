@@ -1,0 +1,92 @@
+using Xunit;
+using Moq;
+using PokemonMaster.Application.Interfaces;
+using PokemonMaster.Application.DTOs;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace PokemonMaster.Application.Tests
+{
+    public class PokemonServiceTests
+    {
+        private readonly Mock<IPokemonService> _pokemonServiceMock;
+
+        public PokemonServiceTests()
+        {
+            _pokemonServiceMock = new Mock<IPokemonService>();
+        }
+
+        [Fact]
+        public async Task GetRandomPokemons_ShouldReturnListOfPokemons()
+        {
+            // Arrange
+            var expectedPokemons = new List<PokemonDTO>
+            {
+                new PokemonDTO { Id = 1, Name = "Bulbasaur", SpriteBase64 = "base64string1", Evolutions = new List<string> { "Ivysaur", "Venusaur" } },
+                new PokemonDTO { Id = 2, Name = "Charmander", SpriteBase64 = "base64string2", Evolutions = new List<string> { "Charmeleon", "Charizard" } },
+                // Add more Pokémon as needed
+            };
+
+            _pokemonServiceMock.Setup(service => service.GetRandomPokemons()).ReturnsAsync(expectedPokemons);
+
+            // Act
+            var result = await _pokemonServiceMock.Object.GetRandomPokemons();
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(expectedPokemons.Count, result.Count);
+        }
+
+        [Fact]
+        public async Task GetPokemonById_ShouldReturnPokemon()
+        {
+            // Arrange
+            var expectedPokemon = new PokemonDTO { Id = 1, Name = "Bulbasaur", SpriteBase64 = "base64string1", Evolutions = new List<string> { "Ivysaur", "Venusaur" } };
+
+            _pokemonServiceMock.Setup(service => service.GetPokemonById(1)).ReturnsAsync(expectedPokemon);
+
+            // Act
+            var result = await _pokemonServiceMock.Object.GetPokemonById(1);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(expectedPokemon.Name, result.Name);
+        }
+
+        [Fact]
+        public async Task CapturePokemon_ShouldReturnSuccess()
+        {
+            // Arrange
+            var pokemonId = 1;
+            var trainerId = 1;
+
+            _pokemonServiceMock.Setup(service => service.CapturePokemon(pokemonId, trainerId)).ReturnsAsync(true);
+
+            // Act
+            var result = await _pokemonServiceMock.Object.CapturePokemon(pokemonId, trainerId);
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public async Task GetCapturedPokemons_ShouldReturnListOfCapturedPokemons()
+        {
+            // Arrange
+            var expectedCapturedPokemons = new List<PokemonDTO>
+            {
+                new PokemonDTO { Id = 1, Name = "Bulbasaur", SpriteBase64 = "base64string1", Evolutions = new List<string> { "Ivysaur", "Venusaur" } },
+                new PokemonDTO { Id = 2, Name = "Charmander", SpriteBase64 = "base64string2", Evolutions = new List<string> { "Charmeleon", "Charizard" } },
+            };
+
+            _pokemonServiceMock.Setup(service => service.GetCapturedPokemons()).ReturnsAsync(expectedCapturedPokemons);
+
+            // Act
+            var result = await _pokemonServiceMock.Object.GetCapturedPokemons();
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(expectedCapturedPokemons.Count, result.Count);
+        }
+    }
+}

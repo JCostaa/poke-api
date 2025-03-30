@@ -1,0 +1,94 @@
+using Microsoft.AspNetCore.Mvc;
+using Moq;
+using PokemonMaster.Application.Interfaces;
+using PokemonMaster.Application.DTOs;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace PokemonMaster.API.Tests
+{
+    public class PokemonControllerTests
+    {
+        private readonly Mock<IPokemonService> _pokemonServiceMock;
+        private readonly PokemonController _pokemonController;
+
+        public PokemonControllerTests()
+        {
+            _pokemonServiceMock = new Mock<IPokemonService>();
+            _pokemonController = new PokemonController(_pokemonServiceMock.Object);
+        }
+
+        [Fact]
+        public async Task GetRandomPokemons_ReturnsOkResult_WithListOfPokemons()
+        {
+            // Arrange
+            var pokemons = new List<PokemonDTO>
+            {
+                new PokemonDTO { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1", Evolutions = new List<PokemonEvolutionDTO>() },
+                new PokemonDTO { Id = 2, Name = "Ivysaur", Sprite = "base64sprite2", Evolutions = new List<PokemonEvolutionDTO>() },
+                // Add more Pokémon as needed
+            };
+            _pokemonServiceMock.Setup(service => service.GetRandomPokemons()).ReturnsAsync(pokemons);
+
+            // Act
+            var result = await _pokemonController.GetRandomPokemons();
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var returnValue = Assert.IsAssignableFrom<List<PokemonDTO>>(okResult.Value);
+            Assert.Equal(pokemons.Count, returnValue.Count);
+        }
+
+        [Fact]
+        public async Task GetPokemonById_ReturnsOkResult_WithPokemon()
+        {
+            // Arrange
+            var pokemon = new PokemonDTO { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1", Evolutions = new List<PokemonEvolutionDTO>() };
+            _pokemonServiceMock.Setup(service => service.GetPokemonById(1)).ReturnsAsync(pokemon);
+
+            // Act
+            var result = await _pokemonController.GetPokemonById(1);
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var returnValue = Assert.IsType<PokemonDTO>(okResult.Value);
+            Assert.Equal(pokemon.Id, returnValue.Id);
+        }
+
+        [Fact]
+        public async Task CapturePokemon_ReturnsOkResult()
+        {
+            // Arrange
+            var captureRequest = new CapturePokemonRequest { PokemonId = 1, TrainerId = 1 };
+            _pokemonServiceMock.Setup(service => service.CapturePokemon(captureRequest)).ReturnsAsync(true);
+
+            // Act
+            var result = await _pokemonController.CapturePokemon(captureRequest);
+
+            // Assert
+            var okResult = Assert.IsType<OkResult>(result);
+            Assert.Equal(200, okResult.StatusCode);
+        }
+
+        [Fact]
+        public async Task GetCapturedPokemons_ReturnsOkResult_WithListOfCapturedPokemons()
+        {
+            // Arrange
+            var capturedPokemons = new List<PokemonDTO>
+            {
+                new PokemonDTO { Id = 1, Name = "Bulbasaur", Sprite = "base64sprite1", Evolutions = new List<PokemonEvolutionDTO>() },
+                new PokemonDTO { Id = 2, Name = "Ivysaur", Sprite = "base64sprite2", Evolutions = new List<PokemonEvolutionDTO>() },
+            };
+            _pokemonServiceMock.Setup(service => service.GetCapturedPokemons()).ReturnsAsync(capturedPokemons);
+
+            // Act
+            var result = await _pokemonController.GetCapturedPokemons();
+
+            // Assert
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var returnValue = Assert.IsAssignableFrom<List<PokemonDTO>>(okResult.Value);
+            Assert.Equal(capturedPokemons.Count, returnValue.Count);
+        }
+    }
+}
